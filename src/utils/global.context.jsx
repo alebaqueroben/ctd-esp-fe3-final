@@ -1,14 +1,14 @@
 import { createContext, useEffect, useReducer, useContext } from "react";
 import Reducer from '../reducers/reducer'
 import axios from "axios";
-import App from "../App";
+
 
 export const DentistaContext = createContext();
 
-const Context = () => {
+const Context = ({children}) => {
 
   const initialState = {
-    //theme:  "light",
+    theme:  "light",
     data: [],
     favs: JSON.parse(localStorage.getItem('favs'))  || []
 }
@@ -17,10 +17,10 @@ const Context = () => {
   
   const [state, dispatch] = useReducer(Reducer, initialState);
   
- /* const toggleTheme = () => {
+  const toggleTheme = () => {
     dispatch({ type: 'TOGGLE_THEME' });
   };
-  */
+  
   useEffect(()  => {
     axios('https://jsonplaceholder.typicode.com/users')
     .then(res => {
@@ -30,9 +30,14 @@ const Context = () => {
     .catch(error => console.error('Error fetching data:', error))
 }, []);
 
+  useEffect(() => {
+  localStorage.setItem('favs', JSON.stringify(state.favs))
+}, [state.favs])
+
+
   return (
-    <DentistaContext.Provider value={{state, dispatch/* toggleTheme*/}}>
-    <App />
+    <DentistaContext.Provider value={{state, dispatch, toggleTheme}}>
+    {children}
     </DentistaContext.Provider>
   );
 };

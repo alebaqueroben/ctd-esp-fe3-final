@@ -6,11 +6,12 @@ import { BrowserRouter } from 'react-router-dom';
 import  Context  from './utils/global.context';
 
 
+
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <BrowserRouter>
   <Context>
-  <App />
+<App />
    </Context>
   </BrowserRouter>
 );

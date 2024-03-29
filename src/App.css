@@ -5,6 +5,16 @@
   text-align: center;
 }
 
+#root.light{
+  background-color: #fff;
+  color: #333;
+}
+
+#root.dark {
+  background-color: #333;
+  color: #fff;
+}
+
 .logo {
   height: 6em;
   padding: 1.5em;
@@ -35,6 +45,7 @@
 
 .card {
   padding: 2em;
+  
 }
 
 .read-the-docs {
@@ -58,6 +69,26 @@
 }
 
 .div.light {
+  background-color: #fff;
+  color: #333;
+}
+
+.footer.dark {
+  background-color: #333;
+  color: #fff;
+}
+
+.footer.light {
+  background-color: #fff;
+  color: #333;
+}
+
+.app.dark {
+  background-color: #333;
+  color: #fff;
+}
+
+.app.light {
   background-color: #fff;
   color: #333;
 }
