@@ -63,26 +63,6 @@
   color: #fff;
 }
 
-.div.dark {
-  background-color: #333;
-  color: #fff;
-}
-
-.div.light {
-  background-color: #fff;
-  color: #333;
-}
-
-.footer.dark {
-  background-color: #333;
-  color: #fff;
-}
-
-.footer.light {
-  background-color: #fff;
-  color: #333;
-}
-
 .app.dark {
   background-color: #333;
   color: #fff;
@@ -91,4 +71,13 @@
 .app.light {
   background-color: #fff;
   color: #333;
+}
+
+.footer {
+  display: flex;
+  justify-content: space-between;
+
+  bottom: 10px;
+  height: 50px;
+  margin-top: 40px;
 }

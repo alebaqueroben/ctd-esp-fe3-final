@@ -15,7 +15,6 @@ const navigate = useNavigate()
         <Link to={routes.favs}><h3>Destacados</h3></Link>
       {/* Deberan implementar ademas la logica para cambiar de Theme con el button */}
       <button onClick={toggleTheme}>{state.theme === 'light'}Cambiar tema</button>
-
     </nav>
   )
 }
